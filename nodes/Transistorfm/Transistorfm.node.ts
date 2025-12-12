@@ -1,6 +1,7 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { userDescription } from './resources/user';
 import { showsDescription } from './resources/shows';
+import { episodesDescription } from './resources/episodes';
 
 export class Transistorfm implements INodeType {
 	description: INodeTypeDescription = {
@@ -40,11 +41,16 @@ export class Transistorfm implements INodeType {
 						name: 'Shows',
 						value: 'shows',
 					},
+					{
+						name: 'Episodes',
+						value: 'episodes',
+					},
 				],
 				default: 'user',
 			},
 			...userDescription,
 			...showsDescription,
+			...episodesDescription,
 		],
 	};
 }
