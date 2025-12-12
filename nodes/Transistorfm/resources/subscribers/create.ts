@@ -1,0 +1,42 @@
+import type { INodeProperties } from 'n8n-workflow';
+
+const showOnlyForSubscribersCreate = {
+	resource: ['subscribers'],
+	operation: ['create'],
+};
+
+export const subscribersCreateDescription: INodeProperties[] = [
+	{
+		displayName: 'Create a single subscriber (POST /v1/subscribers).',
+		name: 'notice',
+		type: 'notice',
+		displayOptions: { show: showOnlyForSubscribersCreate },
+		default: '',
+	},
+	{
+		displayName: 'Show ID or Slug',
+		name: 'showId',
+		type: 'string',
+		displayOptions: { show: showOnlyForSubscribersCreate },
+		default: '',
+		required: true,
+		description: 'Show ID or slug (show_id)',
+	},
+	{
+		displayName: 'Email',
+		name: 'email',
+		type: 'string',
+		displayOptions: { show: showOnlyForSubscribersCreate },
+		default: '',
+		required: true,
+		description: 'Subscriber email address',
+	},
+	{
+		displayName: 'Skip Welcome Email',
+		name: 'skipWelcomeEmail',
+		type: 'boolean',
+		displayOptions: { show: showOnlyForSubscribersCreate },
+		default: false,
+		description: 'Do not send the instructional email',
+	},
+];
