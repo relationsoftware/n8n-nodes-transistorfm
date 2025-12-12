@@ -30,6 +30,9 @@ export const episodesDescription: INodeProperties[] = [
 						url: '/episodes',
 						qs: {
 							show_id: '={{$parameter.showId}}',
+							query: '={{$parameter.query || undefined}}',
+							status: '={{$parameter.status || undefined}}',
+							order: '={{$parameter.order || undefined}}',
 							'pagination[page]': '={{$parameter.page}}',
 							'pagination[per]': '={{$parameter.perPage}}',
 						},

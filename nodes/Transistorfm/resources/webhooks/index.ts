@@ -24,6 +24,9 @@ export const webhooksDescription: INodeProperties[] = [
 					request: {
 						method: 'GET',
 						url: '/webhooks',
+						qs: {
+							show_id: '={{$parameter.showId}}',
+						},
 					},
 				},
 			},
@@ -40,7 +43,7 @@ export const webhooksDescription: INodeProperties[] = [
 							'Content-Type': 'application/json',
 							Accept: 'application/vnd.api+json',
 						},
-						body: '={{(() => ({ webhook: { target_url: $parameter.targetUrl } }))()}}',
+						body: '={{(() => ({ webhook: { event_name: $parameter.eventName, show_id: $parameter.showId, url: $parameter.url } }))()}}',
 					},
 				},
 			},

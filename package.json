@@ -1,19 +1,30 @@
 {
   "name": "n8n-nodes-transistorfm",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "n8n community node for integrating the Transistor.fm API",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/relationsoftware/n8n-nodes-transistorfm",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "n8n",
+    "n8n-node",
+    "transistor",
+    "transistor.fm",
+    "podcast",
+    "podcasting",
+    "api",
+    "automation"
   ],
   "author": {
     "name": "Michael Döhler",
-    "email": "michael.doehler@intellishop.ag"
+    "email": "opensource@relationsoftware.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "git+https://github.com/relationsoftware/n8n-nodes-transistorfm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/relationsoftware/n8n-nodes-transistorfm/issues"
   },
   "scripts": {
     "build": "n8n-node build",

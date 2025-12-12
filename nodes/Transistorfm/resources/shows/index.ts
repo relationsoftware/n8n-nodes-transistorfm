@@ -27,6 +27,8 @@ export const showsDescription: INodeProperties[] = [
                         method: 'GET',
                         url: '/shows',
                         qs: {
+                            private: '={{$parameter.privateOnly ? true : undefined}}',
+                            query: '={{$parameter.query || undefined}}',
                             'pagination[page]': '={{$parameter.page}}',
                             'pagination[per]': '={{$parameter.perPage}}',
                         },

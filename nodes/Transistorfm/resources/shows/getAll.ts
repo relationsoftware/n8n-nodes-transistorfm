@@ -14,6 +14,22 @@ export const showsGetAllDescription: INodeProperties[] = [
         default: '',
     },
     {
+        displayName: 'Private Only',
+        name: 'privateOnly',
+        type: 'boolean',
+        displayOptions: { show: showOnlyForShowsGetAll },
+        default: false,
+        description: 'Filter for private shows',
+    },
+    {
+        displayName: 'Query',
+        name: 'query',
+        type: 'string',
+        displayOptions: { show: showOnlyForShowsGetAll },
+        default: '',
+        description: 'Search query',
+    },
+    {
         displayName: 'Page',
         name: 'page',
         type: 'number',

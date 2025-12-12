@@ -13,4 +13,13 @@ export const webhooksGetAllDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForWebhooksGetAll },
 		default: '',
 	},
+	{
+		displayName: 'Show ID or Slug',
+		name: 'showId',
+		type: 'string',
+		displayOptions: { show: showOnlyForWebhooksGetAll },
+		default: '',
+		required: true,
+		description: 'Show ID or slug (show_id) to list episodes for',
+	},
 ];

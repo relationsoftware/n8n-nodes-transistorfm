@@ -1,46 +1,118 @@
 # n8n-nodes-transistorfm
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+An **n8n community node** for integrating the **Transistor.fm API** into your workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+With this node you can manage podcasts hosted on Transistor.fm, including shows, episodes, subscribers, webhooks, and analytics — directly from n8n.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
-[Installation](#installation)
-[Operations](#operations)
-[Credentials](#credentials)
-[Compatibility](#compatibility)
-[Usage](#usage)
-[Resources](#resources)
-[Version history](#version-history)
+---
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+Follow the official n8n guide for installing community nodes:
 
-## Operations
+👉 https://docs.n8n.io/integrations/community-nodes/installation/
 
-_List the operations supported by your node._
+Once installed, search for **Transistorfm** in the n8n node picker.
+
+---
+
+## Supported Resources & Operations
+
+### User
+| Operation | Description |
+|---------|-------------|
+| Get Me | Retrieve the authenticated user |
+
+### Shows
+| Operation | Description |
+|---------|-------------|
+| Get All | List all shows (filter by query, private, pagination) |
+| Get | Retrieve a single show by ID |
+| Update | Update show metadata |
+
+### Episodes
+| Operation | Description |
+|---------|-------------|
+| Get All | List episodes for a show (query, status, order, pagination) |
+| Get | Retrieve a single episode |
+| Authorize Upload | Get a pre-signed upload URL for audio files |
+| Upload Audio | Upload audio to the pre-signed URL (PUT) |
+| Create | Create a new draft episode |
+| Update | Update an existing episode |
+| Publish / Schedule / Unpublish | Control publishing state |
+
+### Subscribers
+| Operation | Description |
+|---------|-------------|
+| Get All | List subscribers for a show |
+| Get | Retrieve a subscriber |
+| Create | Create a single subscriber |
+| Create Many (Batch) | Create subscribers in bulk |
+| Update | Update subscriber email |
+| Delete by Email | Delete subscriber by email + show |
+| Delete by ID | Delete subscriber by ID |
+
+### Webhooks
+| Operation | Description |
+|---------|-------------|
+| Get All | List all webhooks |
+| Create | Subscribe to webhook events |
+| Delete | Delete a webhook |
+
+### Analytics
+| Operation | Description |
+|---------|-------------|
+| Get Show Analytics | Downloads per day for a show |
+| Get All Episode Analytics | Downloads per day for all episodes of a show |
+| Get Episode Analytics | Downloads per day for a single episode |
+
+---
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+This node uses the **Transistor.fm API Key** for authentication.
 
-## Compatibility
+### Prerequisites
+- A Transistor.fm account
+- An API key (available in the Transistor.fm dashboard)
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
+### Setup in n8n
+1. Open **Credentials**
+2. Create new credentials of type **Transistorfm API**
+3. Paste your API key
+4. Save
 
-## Usage
+The API key is sent via the `x-api-key` request header.
 
-_This is an optional section. Use it to help users with any difficult or confusing aspects of the node._
+---
 
-_By the time users are looking for community nodes, they probably already know n8n basics. But if you expect new users, you can link to the [Try it out](https://docs.n8n.io/try-it-out/) documentation to help them get started._
+## Usage Notes
+
+### Audio Upload Workflow
+Uploading audio files is a **two-step process**:
+
+1. **Authorize Upload**  
+   Generates a pre-signed `upload_url`, `content_type`, and `audio_url`
+
+2. **Upload Audio**  
+   Upload the binary audio file via HTTP `PUT` to the `upload_url`
+
+After a successful upload, use the returned `audio_url` when creating or updating an episode.
+
+---
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* _Link to app/service documentation._
+- Transistor.fm API Documentation  
+  https://developers.transistor.fm
 
-## Version history
+- n8n Community Nodes Documentation  
+  https://docs.n8n.io/integrations/#community-nodes
 
-_This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
+---
+
+## License
+
+MIT
