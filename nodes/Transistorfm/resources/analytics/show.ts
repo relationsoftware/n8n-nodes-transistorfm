@@ -7,7 +7,7 @@ const showOnlyForAnalyticsShow = {
 
 export const analyticsShowDescription: INodeProperties[] = [
 	{
-		displayName: 'Get show analytics (GET /v1/analytics/:id). Dates use dd-mm-yyyy.',
+		displayName: 'Get show analytics (GET /v1/analytics/:ID). Dates use dd-mm-yyyy.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForAnalyticsShow },
@@ -20,7 +20,6 @@ export const analyticsShowDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForAnalyticsShow },
 		default: '',
 		required: true,
-		description: 'Show ID or slug',
 	},
 	{
 		displayName: 'Start Date',

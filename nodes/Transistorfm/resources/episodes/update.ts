@@ -8,7 +8,7 @@ const showOnlyForEpisodesUpdate = {
 export const episodesUpdateDescription: INodeProperties[] = [
 	{
 		displayName:
-			'Update an episode (PATCH /v1/episodes/:id). Only the fields you set will be sent.',
+			'Update an episode (PATCH /v1/episodes/:ID). Only the fields you set will be sent.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForEpisodesUpdate },

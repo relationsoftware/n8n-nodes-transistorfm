@@ -16,10 +16,10 @@ export const webhooksDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForWebhooks },
 		options: [
 			{
-				name: 'Get All',
+				name: 'Get Many',
 				value: 'getAll',
 				action: 'Get webhooks',
-				description: 'Get all webhooks',
+				description: 'Get many webhooks',
 				routing: {
 					request: {
 						method: 'GET',

@@ -51,8 +51,8 @@ export const episodesGetAllDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForEpisodesGetAll },
 		default: 'desc',
 		options: [
-			{ name: 'Newest first (desc)', value: 'desc' },
-			{ name: 'Oldest first (asc)', value: 'asc' },
+			{ name: 'Newest First (Desc)', value: 'desc' },
+			{ name: 'Oldest First (Asc)', value: 'asc' },
 		],
 		description: 'Return order of episodes',
 	},

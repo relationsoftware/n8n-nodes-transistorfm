@@ -7,7 +7,7 @@ const showOnlyForSubscribersUpdate = {
 
 export const subscribersUpdateDescription: INodeProperties[] = [
 	{
-		displayName: 'Update a subscriber (PATCH /v1/subscribers/:id).',
+		displayName: 'Update a subscriber (PATCH /v1/subscribers/:ID).',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForSubscribersUpdate },
@@ -26,6 +26,7 @@ export const subscribersUpdateDescription: INodeProperties[] = [
 		displayName: 'Email',
 		name: 'email',
 		type: 'string',
+		placeholder: 'name@email.com',
 		displayOptions: { show: showOnlyForSubscribersUpdate },
 		default: '',
 		required: true,

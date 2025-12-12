@@ -20,7 +20,7 @@ export const episodesDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForEpisodes },
 		options: [
 			{
-				name: 'Get All',
+				name: 'Get Many',
 				value: 'getAll',
 				action: 'Get episodes',
 				description: 'Get episodes for a show',
@@ -80,9 +80,10 @@ export const episodesDescription: INodeProperties[] = [
 						headers: {
 							'Content-Type': '={{$parameter.contentType}}',
 						},
-						// Tell n8n to send binary data as the request body
-						sendBinaryData: true,
-						binaryPropertyName: '={{$parameter.binaryPropertyName}}',
+						body: {
+							mode: 'binary',
+							binaryPropertyName: '={{$parameter.binaryPropertyName}}',
+						},
 					},
 				},
 			},
@@ -123,7 +124,7 @@ export const episodesDescription: INodeProperties[] = [
 			{
 				name: 'Publish / Schedule / Unpublish',
 				value: 'publish',
-				action: 'Publish, schedule, or unpublish',
+				action: 'Publish schedule or unpublish',
 				description: 'Set episode publishing status',
 				routing: {
 					request: {

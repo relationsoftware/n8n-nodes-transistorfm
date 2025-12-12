@@ -26,6 +26,7 @@ export const subscribersDeleteByEmailDescription: INodeProperties[] = [
 		displayName: 'Email',
 		name: 'email',
 		type: 'string',
+		placeholder: 'name@email.com',
 		displayOptions: { show: showOnlyForSubscribersDeleteByEmail },
 		default: '',
 		required: true,

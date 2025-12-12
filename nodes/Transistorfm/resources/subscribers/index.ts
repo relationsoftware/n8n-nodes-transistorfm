@@ -20,7 +20,7 @@ export const subscribersDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForSubscribers },
 		options: [
 			{
-				name: 'Get All',
+				name: 'Get Many',
 				value: 'getAll',
 				action: 'List subscribers',
 				description: 'Get a list of subscribers for a show',

@@ -26,6 +26,7 @@ export const subscribersCreateDescription: INodeProperties[] = [
 		displayName: 'Email',
 		name: 'email',
 		type: 'string',
+		placeholder: 'name@email.com',
 		displayOptions: { show: showOnlyForSubscribersCreate },
 		default: '',
 		required: true,

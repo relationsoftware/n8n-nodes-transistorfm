@@ -87,7 +87,6 @@ export const showsUpdateDescription: INodeProperties[] = [
 				name: 'secondaryCategory',
 				type: 'string',
 				default: '',
-				description: 'Secondary category',
 			},
 			{
 				displayName: 'Time Zone',

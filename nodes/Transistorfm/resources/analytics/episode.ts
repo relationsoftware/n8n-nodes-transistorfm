@@ -7,7 +7,8 @@ const showOnlyForAnalyticsEpisode = {
 
 export const analyticsEpisodeDescription: INodeProperties[] = [
 	{
-		displayName: 'Get single episode analytics (GET /v1/analytics/episodes/:id). Dates use dd-mm-yyyy.',
+		displayName:
+			'Get single episode analytics (GET /v1/analytics/episodes/:ID). Dates use dd-mm-yyyy.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForAnalyticsEpisode },
@@ -20,7 +21,6 @@ export const analyticsEpisodeDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForAnalyticsEpisode },
 		default: '',
 		required: true,
-		description: 'Episode ID or slug',
 	},
 	{
 		displayName: 'Start Date',

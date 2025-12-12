@@ -22,7 +22,7 @@ export const webhooksCreateDescription: INodeProperties[] = [
 		required: true,
 		options: [
 			{
-				name: 'episode_created',
+				name: 'Episode_created',
 				value: 'episode_created',
 			},
 		],

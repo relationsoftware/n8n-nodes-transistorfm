@@ -8,7 +8,7 @@ const showOnlyForEpisodesPublish = {
 export const episodesPublishDescription: INodeProperties[] = [
 	{
 		displayName:
-			'Publish, schedule, or revert an episode to draft (PATCH /v1/episodes/:id/publish).',
+			'Publish, schedule, or revert an episode to draft (PATCH /v1/episodes/:ID/publish).',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForEpisodesPublish },
