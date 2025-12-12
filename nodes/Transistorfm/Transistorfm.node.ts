@@ -3,6 +3,7 @@ import {userDescription} from './resources/user';
 import {showsDescription} from './resources/shows';
 import {episodesDescription} from './resources/episodes';
 import {subscribersDescription} from './resources/subscribers';
+import {webhooksDescription} from './resources/webhooks';
 
 export class Transistorfm implements INodeType {
     description: INodeTypeDescription = {
@@ -50,6 +51,10 @@ export class Transistorfm implements INodeType {
                         name: 'Subscribers',
                         value: 'subscribers',
                     },
+                    {
+                        name: 'Webhooks',
+                        value: 'webhooks',
+                    },
                 ],
                 default: 'user',
             },
@@ -57,7 +62,7 @@ export class Transistorfm implements INodeType {
             ...showsDescription,
             ...episodesDescription,
             ...subscribersDescription,
-
+            ...webhooksDescription,
         ],
     };
 }
