@@ -1,16 +1,16 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { userDescription } from './resources/user';
-import { companyDescription } from './resources/company';
+import { showsDescription } from './resources/shows';
 
 export class Transistorfm implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Transistorfm',
+		displayName: 'Transistor.fm',
 		name: 'transistorfm',
-		icon: { light: 'file:transistorfm.svg', dark: 'file:transistorfm.dark.svg' },
+		icon: { light: 'file:transistor-fm.svg', dark: 'file:transistor-fm.dark.svg' },
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with the Transistorfm API',
+		description: 'Interact with the Transistor.fm API',
 		defaults: {
 			name: 'Transistorfm',
 		},
@@ -37,14 +37,14 @@ export class Transistorfm implements INodeType {
 						value: 'user',
 					},
 					{
-						name: 'Company',
-						value: 'company',
+						name: 'Shows',
+						value: 'shows',
 					},
 				],
 				default: 'user',
 			},
 			...userDescription,
-			...companyDescription,
+			...showsDescription,
 		],
 	};
 }
