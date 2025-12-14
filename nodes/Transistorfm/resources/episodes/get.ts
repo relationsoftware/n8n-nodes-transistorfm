@@ -7,7 +7,7 @@ const showOnlyForEpisodesGet = {
 
 export const episodesGetDescription: INodeProperties[] = [
 	{
-		displayName: 'Retrieve a single episode by ID (GET /v1/episodes/:id).',
+		displayName: 'Retrieve a single episode by ID.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForEpisodesGet },

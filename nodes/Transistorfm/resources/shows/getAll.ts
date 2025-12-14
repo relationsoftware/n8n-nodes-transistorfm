@@ -19,7 +19,7 @@ export const showsGetAllDescription: INodeProperties[] = [
 		type: 'boolean',
 		displayOptions: { show: showOnlyForShowsGetAll },
 		default: false,
-		description: 'Filter for private shows',
+		description: 'Whether to return only private shows',
 	},
 	{
 		displayName: 'Query',

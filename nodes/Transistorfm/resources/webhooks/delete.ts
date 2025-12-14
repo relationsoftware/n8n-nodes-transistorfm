@@ -7,7 +7,7 @@ const showOnlyForWebhooksDelete = {
 
 export const webhooksDeleteDescription: INodeProperties[] = [
 	{
-		displayName: 'Delete a webhook by ID (DELETE /v1/webhooks/:id).',
+		displayName: 'Delete a webhook by ID.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForWebhooksDelete },

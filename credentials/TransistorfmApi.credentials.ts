@@ -3,12 +3,13 @@ import type {
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
+	IconFile,
 } from 'n8n-workflow';
 
 export class TransistorfmApi implements ICredentialType {
 	name = 'transistorfmApi';
-	Icon = { light: 'file:../nodes/Transistorfm/transistor-fm.svg', dark: 'file:../nodes/Transistorfm/transistor-fm.dark.svg' };
 	displayName = 'Transistor.fm API';
+	icon = 'file:../nodes/Transistorfm/transistor-fm.svg'as IconFile;
 
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/-transistorfm?tab=readme-ov-file#credentials';

@@ -20,36 +20,6 @@ export const subscribersDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForSubscribers },
 		options: [
 			{
-				name: 'Get Many',
-				value: 'getAll',
-				action: 'List subscribers',
-				description: 'Get a list of subscribers for a show',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '/subscribers',
-						qs: {
-							show_id: '={{$parameter.showId}}',
-							query: '={{$parameter.query || undefined}}',
-							'pagination[page]': '={{$parameter.page}}',
-							'pagination[per]': '={{$parameter.perPage}}',
-						},
-					},
-				},
-			},
-			{
-				name: 'Get',
-				value: 'get',
-				action: 'Get a subscriber',
-				description: 'Get a single subscriber by ID',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '=/subscribers/{{$parameter.subscriberId}}',
-					},
-				},
-			},
-			{
 				name: 'Create',
 				value: 'create',
 				action: 'Create a subscriber',
@@ -79,25 +49,7 @@ export const subscribersDescription: INodeProperties[] = [
 							'Content-Type': 'application/json',
 							Accept: 'application/vnd.api+json',
 						},
-						body: '={{(() => { const raw = ($parameter.emails || \"\").trim(); const emails = raw.split(/\\s*[\\n,]+\\s*/).filter(Boolean); return { show_id: $parameter.showId, emails, skip_welcome_email: $parameter.skipWelcomeEmail }; })()}}',
-					},
-				},
-			},
-			{
-				name: 'Update',
-				value: 'update',
-				action: 'Update a subscriber',
-				description: 'Update a subscriber email by ID',
-				routing: {
-					request: {
-						method: 'PATCH',
-						url: '=/subscribers/{{$parameter.subscriberId}}',
-						headers: {
-							'Content-Type': 'application/json',
-							Accept: 'application/vnd.api+json',
-						},
-						// Docs describe subscriber[email]=...; sending JSON as nested object is supported by Transistor (accepts JSON bodies).
-						body: '={{(() => ({ subscriber: { email: $parameter.email } }))()}}',
+						body: '={{(() => { const raw = ($parameter.emails || "").trim(); const emails = raw.split(/\\s*[\\n,]+\\s*/).filter(Boolean); return { show_id: $parameter.showId, emails, skip_welcome_email: $parameter.skipWelcomeEmail }; })()}}',
 					},
 				},
 			},
@@ -127,6 +79,54 @@ export const subscribersDescription: INodeProperties[] = [
 					request: {
 						method: 'DELETE',
 						url: '=/subscribers/{{$parameter.subscriberId}}',
+					},
+				},
+			},
+			{
+				name: 'Get',
+				value: 'get',
+				action: 'Get a subscriber',
+				description: 'Get a single subscriber by ID',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '=/subscribers/{{$parameter.subscriberId}}',
+					},
+				},
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'List subscribers',
+				description: 'Get a list of subscribers for a show',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '/subscribers',
+						qs: {
+							show_id: '={{$parameter.showId}}',
+							query: '={{$parameter.query || undefined}}',
+							'pagination[page]': '={{$parameter.page}}',
+							'pagination[per]': '={{$parameter.perPage}}',
+						},
+					},
+				},
+			},
+			{
+				name: 'Update',
+				value: 'update',
+				action: 'Update a subscriber',
+				description: 'Update a subscriber email by ID',
+				routing: {
+					request: {
+						method: 'PATCH',
+						url: '=/subscribers/{{$parameter.subscriberId}}',
+						headers: {
+							'Content-Type': 'application/json',
+							Accept: 'application/vnd.api+json',
+						},
+						// Docs describe subscriber[email]=...; sending JSON as nested object is supported by Transistor (accepts JSON bodies).
+						body: '={{(() => ({ subscriber: { email: $parameter.email } }))()}}',
 					},
 				},
 			},

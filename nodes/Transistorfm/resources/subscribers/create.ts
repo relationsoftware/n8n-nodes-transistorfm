@@ -7,7 +7,7 @@ const showOnlyForSubscribersCreate = {
 
 export const subscribersCreateDescription: INodeProperties[] = [
 	{
-		displayName: 'Create a single subscriber (POST /v1/subscribers).',
+		displayName: 'Create a single subscriber.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForSubscribersCreate },
@@ -38,6 +38,6 @@ export const subscribersCreateDescription: INodeProperties[] = [
 		type: 'boolean',
 		displayOptions: { show: showOnlyForSubscribersCreate },
 		default: false,
-		description: 'Do not send the instructional email',
+		description: 'Whether to skip sending the instructional email',
 	},
 ];

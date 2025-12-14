@@ -38,6 +38,6 @@ export const subscribersBatchCreateDescription: INodeProperties[] = [
 		type: 'boolean',
 		displayOptions: { show: showOnlyForSubscribersBatchCreate },
 		default: false,
-		description: 'Do not send the instructional emails',
+		description: 'Whether to skip sending the instructional emails',
 	},
 ];

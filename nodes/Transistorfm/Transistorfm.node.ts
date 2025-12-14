@@ -37,28 +37,28 @@ export class Transistorfm implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'User',
-						value: 'user',
-					},
-					{
-						name: 'Show',
-						value: 'shows',
+						name: 'Analytics',
+						value: 'analytics',
 					},
 					{
 						name: 'Episode',
 						value: 'episodes',
 					},
 					{
+						name: 'Show',
+						value: 'shows',
+					},
+					{
 						name: 'Subscriber',
 						value: 'subscribers',
 					},
 					{
-						name: 'Webhook',
-						value: 'webhooks',
+						name: 'User',
+						value: 'user',
 					},
 					{
-						name: 'Analytics',
-						value: 'analytics',
+						name: 'Webhook',
+						value: 'webhooks',
 					},
 				],
 				default: 'user',

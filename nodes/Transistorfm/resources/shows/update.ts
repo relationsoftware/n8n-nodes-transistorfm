@@ -7,7 +7,7 @@ const showOnlyForShowsUpdate = {
 
 export const showsUpdateDescription: INodeProperties[] = [
 	{
-		displayName: 'Update a show by ID (PATCH /v1/shows/:id). Only the fields you set below will be sent.',
+		displayName: 'Update a show by ID. Only the fields you set below will be sent.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForShowsUpdate },
@@ -31,49 +31,11 @@ export const showsUpdateDescription: INodeProperties[] = [
 		placeholder: 'Add field',
 		options: [
 			{
-				displayName: 'Title',
-				name: 'title',
-				type: 'string',
-				default: '',
-			},
-			{
 				displayName: 'Author',
 				name: 'author',
 				type: 'string',
 				default: '',
 				description: 'Podcast author',
-			},
-			{
-				displayName: 'Description',
-				name: 'description',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'Website',
-				name: 'website',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'Keywords',
-				name: 'keywords',
-				type: 'string',
-				default: '',
-				description: 'Comma-separated list of keywords',
-			},
-			{
-				displayName: 'Explicit',
-				name: 'explicit',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				displayName: 'Language',
-				name: 'language',
-				type: 'string',
-				default: '',
-				description: 'Podcast spoken language (e.g. en, de, fr)',
 			},
 			{
 				displayName: 'Category',
@@ -83,17 +45,36 @@ export const showsUpdateDescription: INodeProperties[] = [
 				description: 'Primary category',
 			},
 			{
-				displayName: 'Secondary Category',
-				name: 'secondaryCategory',
+				displayName: 'Description',
+				name: 'description',
 				type: 'string',
 				default: '',
 			},
 			{
-				displayName: 'Time Zone',
-				name: 'timeZone',
+				displayName: 'Explicit',
+				name: 'explicit',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				displayName: 'Keywords',
+				name: 'keywords',
 				type: 'string',
 				default: '',
-				description: 'Publishing time zone (as shown in Transistor docs)',
+				description: 'Comma-separated list of keywords',
+			},
+			{
+				displayName: 'Language',
+				name: 'language',
+				type: 'string',
+				default: '',
+				description: 'Podcast spoken language (e.g. en, de, fr)',
+			},
+			{
+				displayName: 'Secondary Category',
+				name: 'secondaryCategory',
+				type: 'string',
+				default: '',
 			},
 			{
 				displayName: 'Show Type',
@@ -105,6 +86,25 @@ export const showsUpdateDescription: INodeProperties[] = [
 					{ name: 'Serial', value: 'serial' },
 				],
 				description: 'Publishing type',
+			},
+			{
+				displayName: 'Time Zone',
+				name: 'timeZone',
+				type: 'string',
+				default: '',
+				description: 'Publishing time zone (as shown in Transistor docs)',
+			},
+			{
+				displayName: 'Title',
+				name: 'title',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'Website',
+				name: 'website',
+				type: 'string',
+				default: '',
 			},
 		],
 	},

@@ -7,7 +7,7 @@ const showOnlyForSubscribersGet = {
 
 export const subscribersGetDescription: INodeProperties[] = [
 	{
-		displayName: 'Retrieve a single subscriber by ID (GET /v1/subscribers/:id).',
+		displayName: 'Retrieve a single subscriber by ID.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForSubscribersGet },

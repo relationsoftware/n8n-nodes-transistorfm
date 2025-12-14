@@ -31,7 +31,14 @@ export const episodesUpdateDescription: INodeProperties[] = [
 		default: {},
 		placeholder: 'Add field',
 		options: [
-			{ displayName: 'Title', name: 'title', type: 'string', default: '' },
+			{ displayName: 'Alternate URL', name: 'alternateUrl', type: 'string', default: '' },
+			{
+				displayName: 'Audio URL',
+				name: 'audioUrl',
+				type: 'string',
+				default: '',
+			},
+			{ displayName: 'Author', name: 'author', type: 'string', default: '' },
 			{
 				displayName: 'Description',
 				name: 'description',
@@ -40,18 +47,11 @@ export const episodesUpdateDescription: INodeProperties[] = [
 				description: 'Longer description (may contain HTML)',
 			},
 			{
-				displayName: 'Audio URL',
-				name: 'audioUrl',
-				type: 'string',
-				default: '',
+				displayName: 'Email Notifications Override',
+				name: 'emailNotifications',
+				type: 'boolean',
+				default: false,
 			},
-			{
-				displayName: 'Transcript Text',
-				name: 'transcriptText',
-				type: 'string',
-				default: '',
-			},
-			{ displayName: 'Author', name: 'author', type: 'string', default: '' },
 			{ displayName: 'Explicit', name: 'explicit', type: 'boolean', default: false },
 			{ displayName: 'Image URL', name: 'imageUrl', type: 'string', default: '' },
 			{
@@ -68,6 +68,13 @@ export const episodesUpdateDescription: INodeProperties[] = [
 				default: 0,
 				typeOptions: { minValue: 0 },
 			},
+			{ displayName: 'Title', name: 'title', type: 'string', default: '' },
+			{
+				displayName: 'Transcript Text',
+				name: 'transcriptText',
+				type: 'string',
+				default: '',
+			},
 			{
 				displayName: 'Type',
 				name: 'type',
@@ -79,14 +86,7 @@ export const episodesUpdateDescription: INodeProperties[] = [
 					{ name: 'Bonus', value: 'bonus' },
 				],
 			},
-			{ displayName: 'Alternate URL', name: 'alternateUrl', type: 'string', default: '' },
 			{ displayName: 'Video URL', name: 'videoUrl', type: 'string', default: '' },
-			{
-				displayName: 'Email Notifications Override',
-				name: 'emailNotifications',
-				type: 'boolean',
-				default: false,
-			},
 		],
 	},
 ];

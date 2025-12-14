@@ -7,7 +7,7 @@ const showOnlyForSubscribersDeleteById = {
 
 export const subscribersDeleteByIdDescription: INodeProperties[] = [
 	{
-		displayName: 'Delete a subscriber by ID (DELETE /v1/subscribers/:id).',
+		displayName: 'Delete a subscriber by ID.',
 		name: 'notice',
 		type: 'notice',
 		displayOptions: { show: showOnlyForSubscribersDeleteById },
