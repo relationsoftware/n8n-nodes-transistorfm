@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-transistorfm",
-	"version": "1.0.0",
+	"version": "0.0.9",
 	"description": "n8n community node for integrating the Transistor.fm API",
 	"license": "MIT",
 	"homepage": "https://github.com/relationsoftware/n8n-nodes-transistorfm",
